@@ -14,7 +14,7 @@ public class Main {
 		System.out.println(" 데몬 스레드 여부: " + mainThread.isDaemon());
 		
 		// 2. 방법1 - Thread 클래스 상속		
-		System.out.println(" 2. 방법1 - Thread 클래스 상속");
+		System.out.println("\n 2. 방법1 - Thread 클래스 상속");
 		System.out.println("-------------------------------------\n");
 		
 		PrintThread printThread = new PrintThread("◈");		// 스레드 이름 설정 (디버깅용)

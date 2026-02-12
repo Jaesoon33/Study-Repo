@@ -25,7 +25,7 @@ public class PrintThread extends Thread {
 		for(int i = 0; i < 5; i ++) {
 			System.out.println(" [" + getName() + "] " + symbol.repeat(i + 1));
 			try {
-				Thread.sleep(100);	// 0.1ch 대기 (다른 스레드에게 실행할 기회를 제공)
+				Thread.sleep(100);	// 0.1초 대기 (다른 스레드에게 실행할 기회를 제공)
 			}catch(InterruptedException e) {
 				Thread.currentThread().interrupt();	// 인터럽트 플래그를 다신 true로 설정
 				return;		// 종료
