@@ -1,0 +1,154 @@
+/*
+    CSS 리셋 - 브라우저마다 다른 기본 스타일 통일
+        1) 레이아웃 구조가 코드에서 시각적으로 보임
+        2) 영역 이름으로 의미 전달 (header, main, sidebar...)
+*/
+*{  /* 브라우저의 기본 여백을 제거함 */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* padding, border를 width에 포함시킴 설정된 width 초과 X*/  
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f8f9fa;
+    line-height: 1.6;       /* 줄간격: 1.5 ~ 1.8이 읽기 편함 */
+}
+
+.blog-layout{
+    display: grid;
+    grid-template-areas:
+    "header header header"
+    "main main sidebar"
+    "footer footer footer";
+    gap: 20px;      /* 그리드 아이템 사이 간격 */
+    grid-template-rows: auto 1fr auto;      /* content-size, 1fr, content-size */
+    grid-template-columns: 1fr 1fr 300px;   /* 1,2열 균등 분할(반응형), 3열만 고정 너비 */
+
+    max-height: 100vh;       /* footer가 화면 제일 아래로 가게끔 설정 */
+    max-width: 1200px;       /* 너비가 너무 커지지 않도록 제한 */
+    margin: 0 auto;         /* 중앙 정렬 */
+    padding: 20px;
+    border: 1px solid rgb(219, 217, 217);
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+/* grid-area에 정의한 header 영역 */
+.header{
+    grid-area: header;
+    background: rgb(238, 237, 237);
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header h1{
+    font-size: 24px;
+    color: #333;
+}
+
+.header nav{
+    color: #5a5a5a;
+}
+
+
+/* grid-area에 정의한 main 영역 */
+.main-article{
+    grid-area: main;       
+    background: rgb(240, 240, 240); 
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.4);
+}
+
+.main-article h2{
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.meta{
+    color: #888;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.main-article p{
+    margin-bottom: 16px;
+    color:#333;
+}
+
+.code-block{
+    background: #2d2d2d;
+    color: #f8f8f2;
+    padding: 20px;
+    border-radius: 8px;
+    font-family: 'Consolas', monospace;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+/* grid-area에 정의한 sidebar 영역  */
+.sidebar{
+    grid-area: sidebar;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.widget{
+    background: white;
+    padding: 20px;
+    border-radius: 8px;  
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.5);
+}
+
+.widget h3{
+    font-size: 16px;
+    margin-bottom: 15px;
+    color:#333;
+}
+
+.widget ul{
+    list-style-type: none;
+}
+
+.widget li{
+    padding: 8px 0;
+    border-bottom: 1px solid #c5c4c4;
+    color: #666;
+    cursor: pointer;
+}
+
+.widget li:hover{
+    color: #667eea;
+}
+
+.tags{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tags span{
+    background: #667eea50;
+    color: #667eea;
+    padding: 4px 12px;
+    border-radius: 20px;
+}
+
+
+/* grid-area에 정의한 footer 영역  */
+.footer{
+    grid-area: footer;  
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.4);
+}
+
+
+

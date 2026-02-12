@@ -1,0 +1,26 @@
+/*
+    span Keyword
+        - span N   <----- N칸을 차지 (시작점에서 N칸 확장)
+        - span 생략 시 기본값은 span 1
+*/
+.container{
+    display: grid;
+    grid-template-rows: [grid-row-start] 1fr 1fr [grid-row-end] ;     /* 2행 생성 --> 라인: 1,2,3 */
+    grid-template-columns: 1fr [grid-column-start] 1fr 1fr [grid-column-end] ;  /* 3열 생성 --> 라인: 1,2,3,4 */
+    width: 400px;
+    height: 200px;
+    border: 4px solid lightgray;
+}
+
+.item{
+    border: 2px dashed red;
+    background: rgba(255, 127, 80, 0.7);
+}
+
+.item:nth-child(1){  
+    grid-row-start: 1;      /* 행: 1번 라인에서 시작 */
+    grid-row-end: span 2;        /* 행: 2칸 확장 => 3번 라인까지 */
+    grid-column-start: 2;   /* 열: 2번 라인에서 시작 */
+    grid-column-end: span 1;     /* 열: 1칸만 차지 */
+    /* 결과 : 2행 * 1열 = 2칸 차지 */
+}

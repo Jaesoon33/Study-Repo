@@ -1,0 +1,5 @@
+1. 리전(Region)
+	1) 구분 - 인프라
+	2) 내용 - AWS, GCP(Google Cloud Platform), Azure etc.. 클라우드 서비스를 제공하는 거점(National)
+			- ex) 아시아 태평양 리전에는 서울, 도쿄, 베이징 등의 리전이 있음
+				- 사용자는 원하는 리전을 선택하여 서비스를 사용할 수 있음

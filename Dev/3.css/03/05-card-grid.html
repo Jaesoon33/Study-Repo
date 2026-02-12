@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>카드 그리드 레이아웃</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;            
+            box-sizing: border-box;
+        }           
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #ccbe72;
+            min-height: 100vh;      /* 최소한 화면 전체 높이를 확보 (content가 없어도 짤리거나 그러지 않음) */
+            padding: 20px;
+        } 
+        .header {
+            text-align: center;
+            padding: 30px;
+        }
+        .header h1 {
+            color: #1a365d;
+            font-size: 24px;
+            margin-bottom: 8px;
+        }
+        .header p {
+            color: #4a5568;
+            font-size: 14px;
+        }
+        .practice-area{
+            background: white;
+            border: 2px solid #24bd57;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+            max-width: 900px;
+            margin : 0 auto;
+        }
+        .practice-area > h3{
+            color: #2d4831;
+            font-size: 16px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .preview-section{
+            margin-bottom: 40px;
+        }
+        .preview-label{
+            color: #051b11;
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .preview-grid{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .preview-card{
+            background: #f0fff4;
+            border: 2px solid #48bb78;
+            border-radius: 12px;
+            padding: 20px;
+            width: calc(33.333% - 14px);
+            min-width: 200px;
+            margin-bottom: 15px;
+        }
+        .preview-card h4{
+            color: #276749;
+            margin-bottom: 8px;
+        }
+        .preview-card {
+            color: #38a169;
+            font-size: 13px;
+        }
+        .card-grid{
+            display: flex;      
+            flex-wrap: wrap;    
+            gap: 20px;          /* 카드들 사이에 20px 간격 - 행/열 간격 모두 적용됨 */
+        }
+        .card{
+            background: #f0fff4;
+            border: 1px solid #a6ccb3;
+            border-radius: 12px;
+            padding: 20px;
+            width: calc(33.33% - 13.333px);
+            min-width: 200px;
+            margin-bottom: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            box-shadow: 4px 5px 5px rgba(87, 184, 95, 0.3);
+            transition: transform 0.3s, box-shadow 0.2s;
+        }
+        .card:hover{
+            transform: translateY(-6px);
+            box-shadow: 4px 5px 2px rgba(25, 109, 34, 0.3);
+        }
+        .card h4{
+            font-size: larger;
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: #13612d;
+            cursor: pointer;
+        }
+        .card p{
+            color: rgb(88, 88, 88);
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+        .card .tag{
+            border: 1px solid white;
+            background: #8bdda6;
+            border-radius: 15px;
+            padding: 3px 10px;
+            font-weight: 600;
+            color: #136d31;
+            transition: transform 0.3s, background 0.3s, color 0.3s, box-shadow 0.2s;
+        }
+        .card .tag:hover{
+            transform: translateY(-5px);
+            background: linear-gradient(135deg, #6351c7 0%, #647fd8 100%);
+            color: white;
+            box-shadow: 2px 3px 2px rgba(59, 36, 143, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>카드 그리드 레이아웃</h1>
+        <p>flex-wrap으로 반응형 카드 목록 만들기</p>
+    </header>
+
+    <div class="practice-area">
+        <!--
+        <h3>그리드 만들기</h3>
+        <div class="preview-section">
+            <div class="preview-label">목표: 이렇게 만들어야 합니다.(창 크기 줄이면 2개 => 1개로 변함)</div>
+            <div class="preview-grid">
+                <div class="preview-card">
+                    <h4>카드 1</h4>
+                    <p>목표 레이아웃</p>
+                </div>
+
+                <div class="preview-card">
+                    <h4>카드 2</h4>
+                    <p>목표 레이아웃</p>
+                </div>
+
+                <div class="preview-card">
+                    <h4>카드 3</h4>
+                    <p>목표 레이아웃</p>
+                </div>
+            </div>
+        </div>
+        -->
+        <div class="preview-section">
+            <div class="preview-label">완성된 카드 그리드 (창 크기를 조절해보세요!)</div>
+            <div class="card-grid">
+                <div class="card">
+                    <h4>Spring 프로젝트</h4>
+                    <p>Java와 Spring을 활용한 ERP 프로젝트입니다.</p>
+                    <span class="tag">Spring</span>
+                </div>
+                 <div class="card">
+                    <h4>React 쇼핑몰</h4>
+                    <p>React Composition API로 만든 이커머스 프로젝트입니다.</p>
+                    <span class="tag">React</span>
+                </div>
+                 <div class="card">
+                    <h4>Node.js API</h4>
+                    <p>Express와 MongoDB를 활용한 Rest API 서버입니다.</p>
+                    <span class="tag">Node.js</span>
+                </div>
+                 <div class="card">
+                    <h4>Flutter 앱</h4>
+                    <p>Flutter로 개발한 크로스 플랫폼 모바일 프로젝트입니다.</p>
+                    <span class="tag">Flutter</span>
+                </div>
+                 <div class="card">
+                    <h4>Python ML</h4>
+                    <p>Python과 TensorFlow를 활용한 머신러닝 프로젝트입니다.</p>
+                    <span class="tag">Python</span>
+                </div>
+                 <div class="card">
+                    <h4>AWS 인프라</h4>
+                    <p>AWS 서비스를 활용한 클라우드 인프라 구축 프로젝트입니다.</p>
+                    <span class="tag">AWS</span>
+                </div>        
+            </div>
+        </div>
+    </div>
+</body>
+</html>

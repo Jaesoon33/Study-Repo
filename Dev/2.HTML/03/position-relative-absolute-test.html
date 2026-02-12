@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 반응형 웹 구현 -->
+    <title>position: relative와 absolute 관계</title>
+    <!-- html 파일 내부에서 스타일 설정 -->
+    <style> 
+        body{
+            font-family: system-ui, sans-serif;
+            padding: 2rem;
+            background: #111;
+            color: #e5e7eb;
+        }
+
+        h2 {margin: 2rem 0 1rem;}
+
+        /* 부모 요소: .box*/
+        .box{
+            width: 200px;
+            height: 150px;
+            background: #334155;
+            border: 2px solid #64748b;
+            margin: 2rem;
+        }
+
+        /* 자식 요소: .badge*/
+        .badge{
+            width: 30px;
+            height: 30px;
+            background:linear-gradient(135deg,#2563eb, #22c55e);
+            border-radius: 50%; /* 원형*/
+            display: flex; /* 내부 텍스트 정렬*/
+            align-items: center;    /* 수직 중앙 배치*/
+            justify-content: center;    /* 수평 중앙 배치*/
+            font-weight: bold;
+            font-size: 14px;
+        }
+        
+        .without-relative .box{
+            /* position 지정 안됨 -> 기본값 : static 사용됨 */
+        }
+
+        .without-relative .badge{
+            position: absolute; /* 부모가 아닌 뷰포트 기준으로 설정됨
+                                    (부모 포지션이 지정 안되어 있으므로)*/
+            top: 10px;
+            right: 10px;
+        }
+
+        .with-relative .box{
+            position: relative; /* 자식 요소의 기준점*/
+        }
+
+        .with-relative .badge{
+            position: absolute; /* 부모(.box) 요소의 기준점*/
+            top: 10px;          /* 부모 요소 상단에서 10px 떨어짐*/
+            right: 10px;        /* 부모 요소 우측에서 10px 떨어짐*/
+        }        
+
+    </style> 
+</head>
+<body>
+    <h1>position: relative와 absolute 관계</h1>
+
+    <h2>1. 부모에 relative 없음(문제가 있음)</h2>
+    <div class="without-relative">
+        <div class="box"> <!-- 부모 요소로 작용 -->
+            <div class="badge">1</div> <!-- 자식 요소 -->
+            <p style="padding: 1rem;">박스 내용</p>
+        </div>
+    </div>
+
+    <h2>1. 부모에 relative 있음(문제가 없음)</h2>
+    <div class="with-relative">
+        <div class="box"> <!-- 부모 요소로 작용 -->
+            <div class="badge">1</div> <!-- 자식 요소 -->
+            <p style="padding: 1rem;">박스 내용</p>
+        </div>
+    </div>    
+</body>
+</html>

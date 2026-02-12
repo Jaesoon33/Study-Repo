@@ -1,0 +1,90 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.2.9 Chrome/140.0.7339.249 Electron/38.7.2 Safari/537.36" version="29.2.9">
+  <diagram name="페이지-1" id="Xier-vUJAW0A8Qj4qPwp">
+    <mxGraphModel dx="1442" dy="1269" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="-EpTYOZ9wqIxJzWOqcqe-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fad7ac;strokeColor=#b46504;" value="" vertex="1">
+          <mxGeometry height="370" width="450" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="-EpTYOZ9wqIxJzWOqcqe-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f9f7ed;strokeColor=#36393d;" value="&lt;font style=&quot;font-size: 15px; color: rgb(0, 0, 0);&quot;&gt;JavaScript (인터프리터 언어)&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="450" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="-EpTYOZ9wqIxJzWOqcqe-10" edge="1" parent="1" source="-EpTYOZ9wqIxJzWOqcqe-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#d80073;strokeColor=#A50040;" target="-EpTYOZ9wqIxJzWOqcqe-7" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-EpTYOZ9wqIxJzWOqcqe-4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#60a917;strokeColor=#2D7600;fontColor=#ffffff;" value="index.js(소스코드)" vertex="1">
+          <mxGeometry height="70" width="130" x="80" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="-EpTYOZ9wqIxJzWOqcqe-11" edge="1" parent="1" source="-EpTYOZ9wqIxJzWOqcqe-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#d80073;strokeColor=#A50040;" target="-EpTYOZ9wqIxJzWOqcqe-9" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="145" y="320" />
+              <mxPoint x="145" y="320" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-EpTYOZ9wqIxJzWOqcqe-7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#60a917;strokeColor=#2D7600;verticalAlign=middle;fontColor=#ffffff;align=center;" value="V8 / SpiderMonkey" vertex="1">
+          <mxGeometry height="70" width="130" x="80" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="-EpTYOZ9wqIxJzWOqcqe-9" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" value="바로 실행" vertex="1">
+          <mxGeometry height="50" width="90" x="100" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="-EpTYOZ9wqIxJzWOqcqe-12" parent="1" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" value="&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;특징&lt;/font&gt;&lt;div&gt;&lt;font color=&quot;#000000&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;빠른 개발 피드백&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;즉각적 실행&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(255, 0, 0);&quot;&gt;런타임 에러가능&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(255, 0, 0);&quot;&gt;타입 오류 늦게 발견&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="45" width="100" x="300" y="242.5" as="geometry" />
+        </mxCell>
+        <mxCell id="-EpTYOZ9wqIxJzWOqcqe-13" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fad7ac;strokeColor=#b46504;" value="" vertex="1">
+          <mxGeometry height="370" width="450" x="40" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="-EpTYOZ9wqIxJzWOqcqe-14" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f9f7ed;strokeColor=#36393d;" value="&lt;font color=&quot;#000000&quot;&gt;&lt;span style=&quot;font-size: 15px;&quot;&gt;Java (컴파일 언어)&lt;/span&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="450" x="40" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="-EpTYOZ9wqIxJzWOqcqe-27" edge="1" parent="1" source="-EpTYOZ9wqIxJzWOqcqe-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#1ba1e2;strokeColor=#006EAF;" target="-EpTYOZ9wqIxJzWOqcqe-24" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-EpTYOZ9wqIxJzWOqcqe-16" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#60a917;strokeColor=#2D7600;fontColor=#ffffff;" value="App.java (소스코드)" vertex="1">
+          <mxGeometry height="65" width="130" x="80" y="590" as="geometry" />
+        </mxCell>
+        <mxCell id="-EpTYOZ9wqIxJzWOqcqe-17" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#d80073;strokeColor=#A50040;" target="-EpTYOZ9wqIxJzWOqcqe-19" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="145" y="780" />
+              <mxPoint x="145" y="780" />
+            </Array>
+            <mxPoint x="145.0526315789475" y="760" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-EpTYOZ9wqIxJzWOqcqe-21" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" value="컴파일 타임 체크" vertex="1">
+          <mxGeometry height="30" width="90" x="100" y="635" as="geometry" />
+        </mxCell>
+        <mxCell id="-EpTYOZ9wqIxJzWOqcqe-31" edge="1" parent="1" source="-EpTYOZ9wqIxJzWOqcqe-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#1ba1e2;strokeColor=#006EAF;" target="-EpTYOZ9wqIxJzWOqcqe-28" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-EpTYOZ9wqIxJzWOqcqe-22" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;" value="App.class" vertex="1">
+          <mxGeometry height="45" width="100" x="300" y="682.5" as="geometry" />
+        </mxCell>
+        <mxCell id="-EpTYOZ9wqIxJzWOqcqe-30" edge="1" parent="1" source="-EpTYOZ9wqIxJzWOqcqe-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#1ba1e2;strokeColor=#006EAF;" target="-EpTYOZ9wqIxJzWOqcqe-22" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-EpTYOZ9wqIxJzWOqcqe-24" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" value="Javac" vertex="1">
+          <mxGeometry height="45" width="100" x="300" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="-EpTYOZ9wqIxJzWOqcqe-34" edge="1" parent="1" source="-EpTYOZ9wqIxJzWOqcqe-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#1ba1e2;strokeColor=#006EAF;" target="-EpTYOZ9wqIxJzWOqcqe-33" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-EpTYOZ9wqIxJzWOqcqe-25" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d80073;fontColor=#ffffff;strokeColor=#A50040;" value="JVM" vertex="1">
+          <mxGeometry height="45" width="100" x="140" y="760" as="geometry" />
+        </mxCell>
+        <mxCell id="-EpTYOZ9wqIxJzWOqcqe-32" edge="1" parent="1" source="-EpTYOZ9wqIxJzWOqcqe-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#1ba1e2;strokeColor=#006EAF;" target="-EpTYOZ9wqIxJzWOqcqe-25" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-EpTYOZ9wqIxJzWOqcqe-28" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#6a00ff;fontColor=#ffffff;strokeColor=#3700CC;" value="java" vertex="1">
+          <mxGeometry height="30" width="60" x="160" y="690" as="geometry" />
+        </mxCell>
+        <mxCell id="-EpTYOZ9wqIxJzWOqcqe-33" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#60a917;strokeColor=#2D7600;fontColor=#ffffff;" value="실행" vertex="1">
+          <mxGeometry height="70" width="110" x="295" y="747.5" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

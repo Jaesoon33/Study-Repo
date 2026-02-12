@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-element::after</title>
+    <style>
+        body{
+            font-family: system-ui, sans-serif;
+            padding: 2rem;
+            background: #111;
+            color: #e5e7eb;            
+        }
+
+        .with-span a{
+            color: #cbd5f5;
+            text-decoration: none;
+            position: relative;     /* 자식요소의 absolute 기준점*/
+        }
+
+        .with-span .underline{
+            position: absolute;     /* 부모(Anchor) 기준으로 위치 지정*/
+            left: 0;                /* 좌측 정렬*/
+            bottom: -4px;           /* 텍스트 아래로 배치*/
+            width: 100%;            /* 전체 너비*/
+            height: 2px;            /* 밑줄 두께*/
+            background:linear-gradient(135deg,#2563eb, #22c55e);
+        }
+
+        .with-after a{
+            color: #cbd5f5;
+            text-decoration: none;
+            position: relative;
+        }
+
+        .with-after a::after{
+            content: ""; /* 필수로 작성 빈 문자열로 초기화*/
+            position: absolute;     /* 부모(Anchor) 기준으로 위치 지정*/
+            left: 0;                /* 좌측 정렬*/
+            bottom: -4px;           /* 텍스트 아래로 배치*/
+            width: 100%;            /* 전체 너비*/
+            height: 2px;            /* 밑줄 두께*/
+            background:linear-gradient(135deg,#2563eb, #22c55e);
+        }
+    </style>
+</head>
+<body>
+    <h1>::after 가상 요소 비교</h1>
+
+    <h2>1. HTML span 사용</h2>
+    <p class="with-span">
+        <a href="#">    <!-- 더미(default)값 입력-->
+            소개
+            <span class="underline"></span> <!-- span이 밑줄 역할-->
+        </a>
+    </p>
+
+    <h2>2. CSS ::after 사용</h2>
+    <p class="with-after";>
+        <a href="#">
+            소개
+        </a>
+    </p>
+</body>
+</html>

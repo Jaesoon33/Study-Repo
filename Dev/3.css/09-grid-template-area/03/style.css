@@ -1,0 +1,33 @@
+/* 실무 팁 : 본문은 넓게(2fr), 사이드 바는 좁게(1fr) 설계*/
+
+.container{
+    display: grid;
+    grid-template-rows: 80px 350px 130px;    /* 각 행의 높이 지정 */
+    grid-template-columns: 2fr 100px 1fr;    /* 각 열의 너비 지정 - 남은공간, 고정너비(여백 역할) */
+    grid-template-areas:        /* 레이아웃 구조 정의 */
+    "header header header"      /* 1행: header 영역 (3칸 병합) */
+    "main . aside"              /* 2행: main | 빈셀 | aside */
+    "footer footer footer";     /* 3행: footer 전체 (3칸 병합) */
+}
+
+
+/*
+    .container > *
+    부모요소의 모든 직계자식(바로 하위 트리의 요소들)
+*/
+.container > *{
+    border: 10px solid red;
+}
+
+/* grid-area 속성
+    - grid-template-areas에서 정의한 영역 이름과 연결
+    - 해당 요소가 어느 영역에 배치될지 지정
+*/
+
+header{ grid-area:header; }     
+
+main{ grid-area:main; }
+
+aside{ grid-area:aside; }
+
+footer{ grid-area:footer; }

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-element::before</title>
+    <style>
+        body{
+            font-family: system-ui, sans-serif;
+            padding: 2rem;
+            background: #000000;
+            color: #e5e7eb;
+        }   
+
+        .with-span li{
+            list-style: none;   /* 기본 불릿 제거 */
+            margin-bottom: 0.5rem;
+        }   
+
+        .with-span .icon{
+            display: inline-block; /* span tag를 같은 line에 위치하기 위함 -> span, li 같은 line에 위치 */
+            width: 8px;
+            height: 8px;
+            background:linear-gradient(135deg,#2563eb, #22c55e);
+            border-radius: 50%;
+            margin-right: 0.5rem;   /* 텍스트와의 간격*/
+        }
+
+        .with-before li{
+            list-style: none;   /* 기본 불릿 제거 */
+            margin-bottom: 0.5rem;
+            position: relative; /* 가상 요소의 부모 요소로 설정 / ::before의 기준점*/
+            padding-left: 1.2rem; /* 생성될 아이콘 공간 확보*/
+        }
+
+        .with-before li::before{
+            content: "";        /* 빈 문자열로 가상 요소 생성(필수)*/
+            position: absolute; /* 부모(li) 기준으로 위치 지정*/
+            left: 0;            /* 부모 요소 기준으로 왼쪽으로 배치*/
+            top: 0.5rem;        /* 텍스트와 수직 정렬*/    
+            width: 8px;         /* 아이콘 너비*/
+            height: 8px;        /* 아이콘 높이*/
+            background:linear-gradient(135deg,#2563eb, #22c55e);
+            border-radius: 50%;
+            margin-right: 0.5rem
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>::before 가상 요소 비교</h1>
+    <h2>1. HTML span 사용</h2>
+    <ul class="with-span">
+        <li>
+            <span class="icon"></span>  <!-- span tag가 icon 역할-->
+            HTML5 / CSS3
+        </li>
+        <li>
+            <span class="icon"></span>
+            JavaScript
+        </li>
+        <li>
+            <span class="icon"></span>
+            React
+        </li>                
+    </ul>
+
+    <h2>2. CSS ::before 사용</h2>
+    <ul class="with-before">
+        <li>HTML / CSS3</li>
+        <li>JavaScript</li>
+        <li>React</li>
+    </ul>
+</body>
+</html>

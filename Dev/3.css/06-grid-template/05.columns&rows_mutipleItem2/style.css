@@ -1,0 +1,24 @@
+.container{
+    box-sizing: border-box;
+    display:grid;
+    border: 4px solid lightgray;
+    grid-template-rows: repeat(3,100px);
+    grid-template-columns: repeat(3,1fr);     
+}
+
+.item{
+
+    /*
+    text-align: center;     // Inline(span) 요소 정렬
+    align-content: center;  // flex 요소 정렬
+    - table을 구성 하는 각 record 전체에서 중앙 배치 content 텍스트와 record의 구별이 없음 하나의 unit*/ 
+
+    /*
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    - table을 구성하는 record 중앙 사이에 배치 content:centered-content:content */
+
+    border: 2px dashed red;
+}
+

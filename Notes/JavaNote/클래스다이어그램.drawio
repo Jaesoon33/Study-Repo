@@ -1,0 +1,47 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.2.9 Chrome/140.0.7339.249 Electron/38.7.2 Safari/537.36" version="29.2.9">
+  <diagram name="페이지-1" id="L7TDb4jzbz9fufsVSs2e">
+    <mxGraphModel dx="1659" dy="895" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="SVNers3xnS15TsUGDJhF-1" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#6a00ff;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontColor=#ffffff;strokeColor=#3700CC;fontSize=14;" value="Dog" vertex="1">
+          <mxGeometry height="308" width="180" x="130" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="SVNers3xnS15TsUGDJhF-2" parent="SVNers3xnS15TsUGDJhF-1" style="text;strokeColor=#006EAF;fillColor=#1ba1e2;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#ffffff;fontSize=15;" value="name: String&lt;div&gt;breed: String&lt;/div&gt;&lt;div&gt;age : ant&lt;/div&gt;&lt;div&gt;energy: int&lt;/div&gt;" vertex="1">
+          <mxGeometry height="134" width="180" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="SVNers3xnS15TsUGDJhF-4" parent="SVNers3xnS15TsUGDJhF-1" style="text;strokeColor=#C73500;fillColor=#fa6800;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;fontSize=15;" value="bark(): void&lt;div&gt;eat(): void&lt;/div&gt;&lt;div&gt;play(): void&lt;/div&gt;&lt;div&gt;sleep(): void&lt;/div&gt;&lt;div&gt;displayInfo(): void&lt;/div&gt;&lt;div&gt;grest(Dog other): void&lt;/div&gt;" vertex="1">
+          <mxGeometry height="148" width="180" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="SVNers3xnS15TsUGDJhF-5" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=18;" value="ObjectCreate - 클래스 다이어그램&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="370" x="190" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="SVNers3xnS15TsUGDJhF-12" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="SVNers3xnS15TsUGDJhF-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="400" y="215" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yUfPq3NB1WD00QFpQ05--1" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#6a00ff;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontColor=#ffffff;strokeColor=#3700CC;fontSize=14;" value="Product" vertex="1">
+          <mxGeometry height="308" width="180" x="130" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="yUfPq3NB1WD00QFpQ05--2" parent="yUfPq3NB1WD00QFpQ05--1" style="text;strokeColor=#006EAF;fillColor=#1ba1e2;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#ffffff;fontSize=15;" value="name: String&lt;div&gt;price: int&lt;/div&gt;&lt;div&gt;stock: int&lt;/div&gt;" vertex="1">
+          <mxGeometry height="134" width="180" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="yUfPq3NB1WD00QFpQ05--3" parent="yUfPq3NB1WD00QFpQ05--1" style="text;strokeColor=#C73500;fillColor=#fa6800;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;fontSize=15;" value="displayInfo(): void&lt;div&gt;sell(int quantity): boolean&lt;/div&gt;&lt;div&gt;restock(int quantity): void&lt;/div&gt;" vertex="1">
+          <mxGeometry height="148" width="180" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="yUfPq3NB1WD00QFpQ05--4" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="yUfPq3NB1WD00QFpQ05--1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="400" y="565" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yUfPq3NB1WD00QFpQ05--6" parent="1" style="shape=note;size=20;whiteSpace=wrap;html=1;fillColor=#d80073;fontColor=#FFFFFF;strokeColor=#A50040;align=left;fontSize=14;" value="&lt;div&gt;&lt;font&gt;-bark(): -5&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font&gt;-eat(): +20&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font&gt;-play(): -15&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font&gt;-sleep():=100&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font&gt;-eat(): +20&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font&gt;-play(): -15&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font&gt;-sleep():=100&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="150" width="150" x="400" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="yUfPq3NB1WD00QFpQ05--7" parent="1" style="shape=note;size=20;whiteSpace=wrap;html=1;fillColor=#d80073;fontColor=#FFFFFF;strokeColor=#A50040;align=left;fontSize=14;" value="sell() 반환값&lt;div&gt;- true: 판매성공&lt;/div&gt;&lt;div&gt;- false: 재고부족&lt;/div&gt;" vertex="1">
+          <mxGeometry height="150" width="150" x="400" y="500" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

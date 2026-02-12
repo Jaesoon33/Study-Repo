@@ -1,0 +1,163 @@
+1. CSS 기본 구조 
+    1) CSS 문법
+        선택자 {
+            속성: 값;
+            속성: 값;
+        }
+
+2. CSS 적용 방법 3가지
+
+                방식                                문법                              사용 상황 
+      -----------------------------------------------------------------------------------------------------------
+         외부 스타일시트(권장)        <link rel="stylesheet" href="style.css>        대부분의 프로젝트
+         내부 스타일시트              <style>......<style>                          단일 페이지 전용 스타일
+         인라인 스타일                style="....."                              JavaScript으로 동적 스타일 변경 시
+
+    - 실무 권장 : 외부 스타일시트   
+        - 캐싱 가능 (성능 향상)
+        - 유지보수 용이
+        
+3. 선택자(Selector) 정리
+    1) 기본 선택자
+        
+            선택자      문법             예시                  설명
+          ------------------------------------------------------------------------------
+            전체         *           *{margin:0}            모든 요소 선택
+            태그       태그명         body{ ... }           특정 태그 모두 선택
+            클래스     .클래스명      .btn{ ... }           해당 클래스가 가진 요소
+            아이디     #아이디명      #userID{ ... }        해당 ID를 가진 요소(Unique)       
+
+    2) 속성 선택자
+        - ex) type="text"인 input만 선택 후 padding 값 변경
+            input[type=text]{
+                padding = ?;
+            }
+        - ex) type="password"인 input만 선택 후 padding 값 변경
+            input[type=password]{
+                padding = ?;
+            }
+
+    3) 복합 선택자
+        - 자손 선택자 (공백) - 모든 하위 요소
+            .form-group input { ... }
+        - 자식 선택자 (>) - 직접 자식만
+            .form-group > input { ... }
+        - 복합 클래스 (공백없이 여러 선택자 사용)
+            .form-group.checkbox { ... }  // form-group, checkbox 두 개의 클래스를 가진 요소
+        - 그룹 선택자 (,) - 여러 요소에 같은 스타일
+            h1, h2, h3 { ... }
+    
+    4) 선택자 우선순위 
+        
+        순위        선택자 종류               점수
+      ---------------------------------------------
+         1         !important               최우선  (no use gene)
+         2         Inline style             1000점
+         3         IDselector(#id)            100점 
+         4        .class, :pseudo-class       10점
+         5         tags, ::pseudo-element      1점
+
+         - !important > Inline style > IDselector(#id) > .class > tags > *
+         - ex)
+                - #header .nav a    =>  100 + 10 + 1 = 111점
+                  .nav a .activer    =>  10 + 1 +10 = 21점
+                  div p span        => 1 + 1 + 1 = 3점
+
+         - !important는 모든 우선순위를 무시하고 적용됨
+            - 유지보수가 어려워지므로 사용을 지양함
+            - 불가피하게 외부 라이브러리 스타일을 덮어써야할 때만 사용
+
+         - 여러 선택자가 같은 요소 선택 => 우선 순위 높은 스타일 적용
+         - 스타일이 의도한 바와 다를 때 => 우선 순위를 높여서 작성
+         - 브라우저 개발자 도구(F12)에서 요소를 선택하면 적용된 스타일과
+           취소선이 그어진(덮어씌워짐) 스타일을 확인할 수 있음
+
+4. 박스 모델 (Box Model)
+    1) 박스 모델 구조
+    2) box-sizing 속성(필수)
+
+            값               설명               계산방법                                       특징
+    ---------------------------------------------------------------------------------------------------------
+        content-box          기본값     실제너비 = width + padding + border            스타일 예측하기가 어려움
+        border-box           권장       실제너비 = width(padding, border 포함)                 직관적
+    
+    3) 왜 border-box가 좋은가?
+        .box{
+            width: 100px;
+            padding: 10px;
+            border: 1px solid;
+            /* 실제 너비: 100 + 20 + 2 = 122px */
+        }
+
+        .box{
+            box-sizeing : border-box   --> default : content-box 이므로 선언 필요
+            width: 100px;
+            padding: 10px;
+            border: 1px solid;
+            /* 실제 너비: 100px 그대로 */
+        }
+
+    4) margin과 padding 
+        - 단축 속성
+            padding: 10px               // 상하좌우 모두 10px
+            padding: 10px 20px          // 상하 10px, 좌우 20px
+            padding: 10px 20px 30px     // 상 10px, 좌우 20px, 하 30px
+            padding: 10px 20px 30px          // 상 10px, 좌우 20px, 하 30px
+
+        - 개별 속성
+            padding-top/bottome/right/left  // 각 방항에 따라 여백 설정
+
+5. 자주 쓰는 CSS 속성 
+    1) 크기 단위
+
+            단위                 설명                          사용 예
+       ----------------------------------------------------------------------
+            px           절대 단위(고정 크기)               font-size: 16px;
+            %            부모 요소 기준 비율                width: 100%;
+            em           부모 폰트 크기 기준                padding: 1em;
+            rem          루트(html) 폰트 크기 기준          font-size: 1rem;
+            vh           뷰포트 높이의 %                    min-height: 100vh;
+            vw           뷰포트 너비의 %                    width 50vw;
+
+    2) display 속성
+    
+    layout-justify,align 참고 : https://ipex.tistory.com/entry/CSS3-flex-Box-justifycontent-alignitems
+        
+            값                 설명                              특징
+    -------------------------------------------------------------------------------------
+           Block            블록요소(div)         한 줄 전체 차지 width, height 설정 가능
+           Inline         인라인 요소(span)       콘텐츠 크기만큼 차지, width/height 무시
+        Inlie-Block       인라인 블록 요소           한줄에 여러 개, width/height 지정 가능
+           flex           플렉스 컨테이너           자식 요소 유연하게 배치(1-dimension)
+           gird           그리드 컨테이너                     2-dimension
+           none                숨김                   요소는 있지만 표시 X 공간 차지 X
+           
+    3) figure + figurecaption 중앙 정렬
+        - 전체 구조
+            <figure>
+                <img>
+                <figurecaption>
+            </figure>
+        
+        - 전략
+            - figure tag : 자체를 중앙 정렬 (부모 역할)
+                - width: fit-content --> 내용물 크기에 맞춤
+                    - 너비를 이미지 크기에 맞추기 위함
+                    - 이미지가 400px이면 figure도 400px이면
+                    - 이렇게 해야 캡션도 이미지 너비에 맞춰 정렬됨
+                - margin: 30px auto  --> 상하 여백 + 좌우는 중앙 정렬
+            - img tag : block으로 변환
+                - display: block    --> inline 기본값 제거 
+                - 이렇게 해야 figure 안에서 깔끔하게 배치됨
+            - figurecaption tag : 텍스트 중앙 정렬
+                - text-align: center --> 캡션 텍스트 가운데
+5. flex-wrap(줄바꿈)
+    - flex-wrap: nowrap
+        - 한줄 유지 
+
+6. 02-navbar.html
+    1) 메뉴 링크 스타일
+        - <a> 태그는 기본적으로 inline 요소
+        - inline 요소에는 transfrom 속성이 적용되지 않음
+        - 따라서 inline-block 또는 block으로 변경 해야 transform 적용이 가능함
+

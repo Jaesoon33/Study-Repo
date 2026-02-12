@@ -1,0 +1,37 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.2.9 Chrome/140.0.7339.249 Electron/38.7.2 Safari/537.36" version="29.2.9">
+  <diagram name="페이지-1" id="1uyCY-BEKQ8A2lBIcw8L">
+    <mxGraphModel dx="1102" dy="967" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="iFLnvYbFrYTDW2t5bNBW-4" edge="1" parent="1" source="iFLnvYbFrYTDW2t5bNBW-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="iFLnvYbFrYTDW2t5bNBW-3" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="iFLnvYbFrYTDW2t5bNBW-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D8349E;fontColor=#ffffff;strokeColor=#A50040;" value="Hello.java&lt;div&gt;(소스 코드)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="120" width="120" x="14" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="iFLnvYbFrYTDW2t5bNBW-7" edge="1" parent="1" source="iFLnvYbFrYTDW2t5bNBW-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="iFLnvYbFrYTDW2t5bNBW-6" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="iFLnvYbFrYTDW2t5bNBW-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#6a00ff;fontColor=#ffffff;strokeColor=#3700CC;" value="Hello.class&lt;div&gt;(바이트 코드)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="120" width="120" x="354" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="iFLnvYbFrYTDW2t5bNBW-5" edge="1" parent="1" source="iFLnvYbFrYTDW2t5bNBW-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="iFLnvYbFrYTDW2t5bNBW-2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="iFLnvYbFrYTDW2t5bNBW-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;" value="javac&lt;br&gt;&lt;div&gt;(컴파일러)&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;check syntex&lt;/div&gt;&lt;div&gt;+&lt;/div&gt;&lt;div&gt;transfrom&lt;/div&gt;" vertex="1">
+          <mxGeometry height="120" width="120" x="184" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="iFLnvYbFrYTDW2t5bNBW-9" edge="1" parent="1" source="iFLnvYbFrYTDW2t5bNBW-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="iFLnvYbFrYTDW2t5bNBW-8" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="iFLnvYbFrYTDW2t5bNBW-6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" value="&lt;div&gt;JVM&lt;/div&gt;&lt;div&gt;(Virtual Machine)&lt;/div&gt;&lt;div&gt;바이트코드 해석&lt;/div&gt;" vertex="1">
+          <mxGeometry height="120" width="120" x="524" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="iFLnvYbFrYTDW2t5bNBW-8" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fa6800;fontColor=#000000;strokeColor=#C73500;" value="&lt;font color=&quot;#ffffff&quot;&gt;실행&lt;/font&gt;&lt;div&gt;&lt;font color=&quot;#ffffff&quot;&gt;(결과)&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font color=&quot;#ffffff&quot;&gt;출력&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="120" width="120" x="694" y="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

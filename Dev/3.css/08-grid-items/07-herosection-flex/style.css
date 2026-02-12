@@ -1,0 +1,129 @@
+/* 
+    겹쳐진 요소들에 대한 레이아웃(grid 사용)
+        - 핵심 : 모든 요소를 "같은 셀"에 배치하면 자연스럽게 겹쳐짐
+*/
+
+*{
+    margin: 0;       
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/*
+    히어로 컨테이너 (Grid 설정)
+        - 1행 1열 그리드 선언
+        - 모든 자식을 같은 셀 (1행 1열에 배치하면 겹침)
+*/
+
+.hero{
+    display: grid;
+    grid-template-rows: 1fr;        /* 단일 행 - 컨테이너 높이만큼 */
+    grid-template-columns: 1fr;     /* 단일 열 - 컨테이너 너비만큼 */
+    min-height: 500px;              /* 최소높이 보장 */
+    position: relative;             /* 배치(absolute)의 기준점 */
+}
+
+/*
+    가장 하위의 1st layer: 배경 이미지 
+     - grid-row: 1/2
+      - grid-column: 1/2
+*/
+.hero-bg{
+    grid-row: 1/2;
+    grid-column: 1/2;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 200px;
+    opacity: 0.3;
+}
+
+/*
+    2nd layer: 반투명 이미지
+      - 배경 위에 어두운 그라데이션을 덮어서 텍스트 가독성을 높임
+*/
+.hero-overlay{
+    grid-row: 1/2;
+    grid-column: 1/2;
+    /* top: 30% 어둡게, bottom: 70% 어둡게 */
+    background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.7));
+}
+/*
+    3rd layer: 컨텐츠 영역 (text + button)
+        -z-index: 쌓임 순서(z축)를 지정함
+            - 숫자가 클수록 사용자 방향의 axis direction을 가짐
+            - default: auto // HTML 선언된 순서 
+*/
+ .hero-content {
+    grid-row: 1 / 2;        /* 1행 전체 차지 */
+    grid-column:  1 / 2;    /* 1열 전체 차지 */   
+    display: flex;
+    flex-direction: column;  /* 세로 방향 정렬 */  
+    align-items: center;     /* 가로 중앙 정렬 */
+    justify-content: center;  /* 세로 중앙 정렬 */
+    text-align: center;
+    color: white;
+    padding: 20px;
+    z-index: 1;
+ }
+
+h1{
+    font-size: 50px;
+    font-weight: bold;
+    color:rgba(255, 255, 255, 100%);
+    margin-bottom: 12px;
+    text-shadow: 2px 2px 20px rgba(145, 89, 89, 0.2);
+}
+
+p{
+    text-align: center;
+    display: block;
+    font-size: 20px;
+    font-weight: 600;
+    color:white;    
+    margin-bottom: 15px;
+    opacity: 0.9;
+}
+
+.cta-button{
+    display: flex;
+    color: #af40aa;
+    background: rgb(255, 255, 255, 1.0);
+    margin: 0 auto;
+    padding: 10px 20px;
+    font-size: 15px;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    transition: transform 2s, box-shadow 0.2s;
+    cursor: pointer;
+}
+
+.cta-button:hover{
+  transform:translateY(-3px);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+/*
+    Exceptional layer(4)
+*/
+.hero-badge{
+    position: absolute;
+    right: 10px;
+    bottom: 15px;
+    padding: 13px 16px;
+    color: #f5f5f5;
+    border-radius: 7px;
+    border: none;
+    background: rgb(199, 54, 54);
+    font-weight: bold;
+    cursor: pointer
+}
+

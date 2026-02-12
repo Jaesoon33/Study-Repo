@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>difference Flexbox vs Grid</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #d4e0e0;
+            padding: 40px 20px;
+            min-height: 100vh;      /* 최소한 화면 전체 높이를 확보 (content가 없어도 짤리거나 그러지 않음) */
+        } 
+        .Flex{
+            display: flex;
+            background: #c6f6d5;
+            border: 2px solid #48bb78;
+            border-radius: 8px;
+            padding: 15px;
+        }
+        .Felx div{
+            font-size: 13px;
+            
+        }
+        .Grid{
+            display:grid;
+        }
+        .grid{
+            grid-template-columns: repeat(5, 1fr);
+        }
+        .practice-area{
+            background: white;
+            border: 2px dashed #cbd5e0;
+            border-radius: 12px;
+            padding: 40px 20px;
+            max-width: 700px;
+            margin-bottom: 30px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="practice-area">
+        <div class="Flex">
+              <div class="item">div1</div>
+              <div class="item">div2</div>
+              <div class="item">div3</div>
+              <div class="item">div4</div>
+              <div class="item">div5</div>
+        </div>
+    </div>
+    <div class="Grid">
+        <div class="grid">
+            <p>div1</p>
+            <p>div2</p>
+            <p>div3</p>
+            <p>div4</p>
+            <p>div5</p>
+        </div>
+    </div>
+</body>
+</html>

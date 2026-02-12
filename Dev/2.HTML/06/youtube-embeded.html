@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube 임베디드 실습</title>
+    <style>
+        body{
+            font-family: 'Malgun Gothic', sans-serif;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container{
+            max-width: 800px;   /* 최대 너비 제한 */
+            margin: 0 auto;     /* 좌우 마진 auto -> 중앙 정렬 */
+        }
+        h1{
+            color:#c00;
+            margin-bottom: 30px;
+        }
+        h2{
+            color : #333;
+            margin: 30px 0 15px;    /* 위 30px, 아래 15px, 좌우 0px */
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
+        }
+        .video-wrapper{
+            position: relative;
+            padding-bottom: 56.25%;     /* 16:9 비율 유지 */
+            height: 0;                  /* 높이는 padding 값으로 대체 */
+            overflow: hidden;           /* 넘치는 부분 숨김 */
+            border-radius: 8 px;        /* 둥근 모서리 */
+            margin-bottom: 15px;        /* 하단 여백 */
+        }
+        /* iframe 부모 전체에 채움 */
+        .video-wrapper iframe{
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          border: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>▶️ YouTube 동영상 임베디드</h1>
+        <h2>1. 기본 임베디드</h2>
+        <div class="video-wrapper">
+            <iframe
+                src="https://www.youtube.com/embed/b7k0a5hYnSI"
+                title="Natasha Bedingfield"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
+                allowfullscreen 
+                >
+            </iframe>
+        </div>
+        <div class="info-box">
+            <h3>🎤 영상 정보</h3>
+            <ul>
+                <li>
+                    <strong>아티스트: Natasha Bedingfield</strong>
+                </li>
+                <li>
+                    <strong>출생:</strong> 1981년, 영국
+                </li>
+                <li>
+                    <strong>곡명:</strong> Unwritten
+                </li>
+                <li>
+                    <strong>발매:</strong> 2004년
+                </li>
+                <li>
+                    <strong>특징:</strong> 야외/자연 배경, 희망적이고 긍정적인 메시지
+                </li>
+                <li>
+                    <strong>기록:</strong> 빌보드 5위, 미국 드라마 "The Hills" 테마곡
+                </li>
+            </ul>
+        </div>
+
+        <h2>2. 옵션 적용 예시</h2>
+        <div class="video-wrapper">
+            <iframe
+                src="https://www.youtube.com/embed/AWGqoCNbsvM?start=30&end=35*autoplay=1&mute=1&cc_load_policy=1" 
+                title= "Colbie Caillat - Bubbly" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
+                allowfullscreen 
+                >
+        </iframe>
+        </div>
+    </div>
+</body>
+</html>

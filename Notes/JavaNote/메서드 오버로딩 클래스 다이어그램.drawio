@@ -1,0 +1,34 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.2.9 Chrome/140.0.7339.249 Electron/38.7.2 Safari/537.36" version="29.2.9">
+  <diagram name="페이지-1" id="C3IKrnDv3MrGWVT51Bji">
+    <mxGraphModel dx="1128" dy="607" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="lkSEp9-KFApVOehc7MdX-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=25;" value="메서드 오버로딩 클래스 다이어그램" vertex="1">
+          <mxGeometry height="70" width="411" x="208" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="lkSEp9-KFApVOehc7MdX-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;dashed=1;dashPattern=12 12;" value="" vertex="1">
+          <mxGeometry height="340" width="410" x="40" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="lkSEp9-KFApVOehc7MdX-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1A1A1A;fontStyle=1;fontSize=15;align=left;" value="&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;+ void print(int value)&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;+ void print(double value)&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;+ void print(String value)&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;+ void print(boolean value)&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;+ void print(String value, int times)&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;+ void print(int[] value)&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;//6개의 print() 오버로딩&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;// 타입에 따라 다른 출력 형식&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="270" width="345" x="72.5" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="lkSEp9-KFApVOehc7MdX-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;fontSize=14;fontStyle=1" value="Printer" vertex="1">
+          <mxGeometry height="30" width="347.5" x="71.5" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="lkSEp9-KFApVOehc7MdX-6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;dashed=1;dashPattern=12 12;" value="" vertex="1">
+          <mxGeometry height="340" width="410" x="480" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="lkSEp9-KFApVOehc7MdX-7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#60a917;strokeColor=#2D7600;fontStyle=1;fontSize=15;align=left;fontColor=#ffffff;" value="// add() 오버로딩 오버로딩&lt;div&gt;+ int add(int a, int b)&lt;/div&gt;&lt;div&gt;+ int add(int a, int b, int c)&lt;/div&gt;&lt;div&gt;+ double add(duble a, double b)&lt;/div&gt;&lt;div&gt;+ int add(int... numbers)&amp;nbsp; //가변인자&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;// multiply() 오버로딩&lt;/div&gt;&lt;div&gt;+ int multiply(int a, int b)&lt;/div&gt;&lt;div&gt;+ int mu&lt;/div&gt;" vertex="1">
+          <mxGeometry height="270" width="345" x="512.5" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="lkSEp9-KFApVOehc7MdX-8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;fontSize=14;fontStyle=1" value="AdvancedCalculator" vertex="1">
+          <mxGeometry height="30" width="347.5" x="511.5" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="lkSEp9-KFApVOehc7MdX-9" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="개수별 오버로딩 + 가변인자" vertex="1">
+          <mxGeometry height="30" width="215" x="577.5" y="110" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

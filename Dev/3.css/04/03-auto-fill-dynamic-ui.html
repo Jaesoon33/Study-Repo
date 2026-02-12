@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>auto-fit 실무예제 - 동적 태그 UI</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;            
+            box-sizing: border-box;
+        }           
+        body {
+            
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #014a6b;
+            min-height: 100vh;      /* 최소한 화면 전체 높이를 확보 (content가 없어도 짤리거나 그러지 않음) */
+            padding: 20px;
+            line-height: 1.6;
+            border-radius: 16px;
+            margin-bottom: 30px;
+        }
+        header{
+            color: white;
+        }
+        .header h1 {
+            font-size: 1.8rem;      /* 반응형으로 폰트를 설정(rem 단위) */
+            margin-bottom: 10px;
+        }
+        .header p {
+            opacity: 0.9;
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+        .section{
+            margin-bottom: 50px;
+            background: #1e293b;
+            padding: 25px;
+            border-radius: 12px;
+            width: 100%;
+        }
+        .section-title{
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            display: flex;
+            gap: 10px;              /* 아이콘과 텍스트 간격*/
+            align-items: center;
+            color: #94a3b8;
+        }
+        .tag-grid{
+            color: white;       /* Gird 레이아웃 활성화 */
+            display: flex;
+            justify-content: left;
+            gap: 12px;
+        }
+        .tag{
+            display: inline-block;
+            background: #334155;
+            color: #e2e8f0;
+            padding: 12px 16px;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.3s;       /* hover 애니메이션 */
+            cursor: pointer;
+            border: 2px solid transparent   /* 투명 테두리 (호버용) */
+        }
+        .tag:hover{
+            transform: translateY(-5px);
+            background: #475569;
+            border-color: #60a5fa;
+        }
+        .tag.frontend{
+            border-left: 4px solid #60a5fa;
+    
+        }
+        .tag.backend{
+            border-left: 4px solid #4ade80;
+        }
+        .tag.database{
+            border-left: 4px solid #f472b6;
+        }
+        .tag.devops{
+            border-left: 4px solid #fbbf24;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>🏷️ 기술 스택 태그</h1>
+        <p>auto-fill로 만든 일관된 크기의 동적 태그 UI</p>
+    </header>
+
+    <section class="section">
+        <h2 class="section-title">
+            <span>💻</span> Frontend Skills 
+        </h2>
+        <div class="tag-grid">
+            <span class="tag frontend">HTML5</span>
+            <span class="tag frontend">CSS3</span>
+            <span class="tag frontend">JavaScript</span>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">
+            <span>💻</span> Backend Skills 
+        </h2>
+        <div class="tag-grid">
+            <span class="tag backend">Java</span>
+            <span class="tag backend">SpringBoot</span>
+            <span class="tag backend">Python</span>
+            <span class="tag backend">Node.js</span>
+            <span class="tag backend">FastAPI</span>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">
+            <span>💻</span> Database
+        </h2>
+        <div class="tag-grid">
+            <span class="tag database">MySQL</span>
+            <span class="tag database">Oracle</span>
+            <span class="tag database">PostgreSQL</span>
+            <span class="tag database">Redis</span>
+        </div>
+    </section>    
+
+    <section class="section">
+        <h2 class="section-title">
+            <span>💻</span> DevOps
+        </h2>
+        <div class="tag-grid">
+            <span class="tag devops">Docker</span>
+            <span class="tag devops">kubernetes</span>
+            <span class="tag devops">AWS</span>
+            <span class="tag devops">GitHub Action</span>
+            <span class="tag devops">Jenkins</span>
+            <span class="tag devops">Terraform</span>
+        </div>
+    </section>  
+    
+</body>
+</html>

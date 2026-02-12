@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실무 오디오 플레이어</title>
+    <style>
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>오디오 플레이어 실습</h1>
+        
+        <div class="audio-card">
+            <h3>🎵 배경 음악</h3>            
+            <audio controls preload="metadata">
+                <source src="../medias/spring.mp3" type="audio/mpeg">
+                <p>브라우저가 오디오를 지원하지 않습니다.</p>
+            </audio>   
+        </div>
+
+        <div class="audio-card">
+            <h3>🔁 반복 재생 (배경음악용)</h3>
+            <audio controls loop preload="auto">
+                <source src="../medias/spring.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+        
+        <div class="audio-card">
+            <h3>▶️ 자동 재생 예제</h3>
+            <audio controls autoplay loop muted preload="auto">  <!-- muted 속성으로 인해 자동재생은 하지만 음소거 상태 -->
+                <source src="../medias/spring.mp3" type="audio/mpeg">
+            </audio>
+            <p class="warning-text">
+                ※ 자동재생은 음소거 상태에서만 동작합니다 (browser policy)
+            </p>
+        </div>
+    </div>
+</body>
+</html>

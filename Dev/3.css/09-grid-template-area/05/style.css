@@ -1,0 +1,36 @@
+/* 
+    3행, 각 행 높이 100px
+    3열, 균등 분할
+
+    use repeat(repeat times, value) function
+
+ */
+.container{
+    display: grid;
+
+    grid-template-rows: repeat(3,100px);                            
+    grid-template-columns: repeat(3,1fr) 1fr;                            
+
+    grid-template-areas:             /* 레이아웃 구조 정의 */
+        "header header header"       /* 1행: header 영역 (3칸 병합) */
+        "main main aside"            /* 2행: main 2열 aside 1열 */
+        "footer footer footer";       /* 3행: footer 전체 (3칸 병합) */
+}
+
+.item{
+    border: 10px solid red;
+}
+
+/* nth-child로 각 아이템에 grid-area 할당 */
+.item:nth-child(1){             /* 1st item */
+    grid-area: header;          /* header 영역에 배치 */
+}
+.item:nth-child(2){             /* 2nd item */            
+    grid-area: main;            /* main 영역에 배치 */
+}
+.item:nth-child(3){             /* 3rd item */
+    grid-area: aside;           /* aside 영역에 배치 */
+}
+.item:nth-child(4){             /* 4th item */ 
+    grid-area: footer;          /* footer 영역에 배치 */
+}

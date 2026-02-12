@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제품 카드 그리드 레이아웃</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;            
+            box-sizing: border-box;
+        }           
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+            min-height: 100vh;      /* 최소한 화면 전체 높이를 확보 (content가 없어도 짤리거나 그러지 않음) */
+            padding: 40px 20px;
+            min-height: 100vh;
+        }
+        h1{
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #11790e;
+            font-size: 1.8rem;
+            font-weight: bold;
+            padding: 20px;
+        }
+        .product-container{
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+            gap: 45px;
+            padding: 20px;
+            border: 2px solid rgb(66, 209, 66);
+            border-radius: 14px 14px 14px 14px;    
+        }
+         .product-card{
+            border-radius: 8px;
+            border: 1px solid rgb(230, 227, 227);
+            box-shadow: 0px 7px 3px rgba(0,0,0,0.1);
+        }
+        
+        .product-container .product-image img{
+            margin-bottom: 20px;
+            object-fit: cover;   /* 비율 유지하며 채우기 */            
+            width: 100%;         /* 카드 너비에 맞춤 */
+            height: 200px;
+            border-radius: 7px 7px 0px 0px;      
+            object-fit: cover;
+        }
+        
+             
+
+        .product-category{
+            margin: 8px auto;
+            font-size: 1.5rem;
+            color: gray;
+        }
+        .product-name{
+            font-size: 2.2rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .product-price{
+            color: rgb(43, 190, 38);
+            font-size: 2rem;
+            font-weight: bolder;
+            margin-bottom: 8px;
+        }
+        .add-to-cart{
+            width: 100%;
+            background: #2bbe26;
+            color: white;
+            font-weight: 500;
+            border: none;
+            border-radius: 6px;
+            height: 55px;
+            transition: background 0.3s;
+            cursor: pointer;
+            padding: 5px;            
+        }
+        .add-to-cart:hover{
+            background: #4338ca
+        }            
+        .product-card:hover{
+            transform:translateY(-7px);
+            box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.3); ;
+        }
+        .product-info{
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>쇼핑몰 제품 목록 (grid 적용 완료)</h1>
+    <div class="product-container">
+        <div class="product-card">
+            <div class="product-image">
+                <img src="https://picsum.photos/300/200?ramdom1" alt="러닝화">
+            </div>
+            <div class="product-info">
+                <p class="product-category">신발</p>
+                <h4 class="product-name">에어맥스 러닝화</h4>
+                <p class="product-price">₩129,000</p>
+                <button class="add-to-cart">장바구니 담기</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="https://picsum.photos/300/200?ramdom2" alt="티셔츠">
+            </div>
+            <div class="product-info">
+                <p class="product-category">의류</p>
+                <h4 class="product-name">프리미엄 티셔츠</h4>
+                <p class="product-price">₩45,000</p>
+                <button class="add-to-cart">장바구니 담기</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="https://picsum.photos/300/200?ramdom3" alt="백팩">
+            </div>
+            <div class="product-info">
+                <p class="product-category">가방</p>
+                <h4 class="product-name">캔버스 백팩</h4>
+                <p class="product-price">₩89,000</p>
+                <button class="add-to-cart">장바구니 담기</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="https://picsum.photos/300/200?ramdom4" alt="스마트워치">
+            </div>
+            <div class="product-info">
+                <p class="product-category">액세서리</p>
+                <h4 class="product-name">스마트 워치</h4>
+                <p class="product-price">₩299,000</p>
+                <button class="add-to-cart">장바구니 담기</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="https://picsum.photos/300/200?ramdom5" alt="모자">
+            </div>
+            <div class="product-info">
+                <p class="product-category">모자</p>
+                <h4 class="product-name">베이스볼 캡</h4>
+                <p class="product-price">₩35,000</p>
+                <button class="add-to-cart">장바구니 담기</button>
+            </div>
+        </div>
+
+         <div class="product-card">
+            <div class="product-image">
+                <img src="https://picsum.photos/300/200?ramdom6" alt="헤드폰">
+            </div>
+            <div class="product-info">
+                <p class="product-category">전자기기</p>
+                <h4 class="product-name">무선 헤드폰</h4>
+                <p class="product-price">₩189,000</p>
+                <button class="add-to-cart">장바구니 담기</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

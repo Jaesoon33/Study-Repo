@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>displayex</title>
+    <style>
+        nav > ul { list-style:none;}
+        nav ul li{
+            display: inline-block;
+             /* case display: inline-block : 하단의 설정 값들 적용 및 inline 레벨로 표현 가능
+                case display: inline : inline 레벨로 표현이 가능하나 block 레벨 처럼 하단의 설정 값 적용이 불가함 */
+            width: 100px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            margin: 10px;
+            border: 1px solid #222;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>menu 1</li>
+            <li>menu 2</li>
+            <li>menu 3</li>
+            <li>menu 4</li> 
+        </ul>
+    </nav>    
+</body>
+</html>

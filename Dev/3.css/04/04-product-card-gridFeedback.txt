@@ -1,0 +1,18 @@
+1. 축소한 경우 사진이 짤리는 이유
+<div class="product-image">
+                <img src="https://picsum.photos/300/200?ramdom1" alt="러닝화">
+            </div>
+위의 코드에서 클래스가 아닌 이미지에 스타일을 주어야함
+    - 클래스에 스타일을 주니 화면 축소 시에 딱맞게 들어가지 않음
+
+2. 확대한 경우 카드에서 사진이나 텍스트가 탈출 하는 이유
+.product-container{
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+            gap: 45px;
+            padding: 20px;              ----- padding: 40px 이상의 값을 주면 문제가 되어 텍스트 및 주 제목이 찌부됨
+            border: 2px solid rgb(66, 209, 66);
+            border-radius: 14px 14px 14px 14px;    
+        }
+    그리드 컨테이너에 padding 값을 너무 많이 주어서 너비를 확보못하고 탈출함
+ 
